@@ -1,0 +1,55 @@
+react js 
+install node js
+npm i
+drive (createfolder)
+cd projectname 
+npm start
+code.    
+npm start 
+
+* Terminal command shotrcut for vs code
+rfce:- normal funcation
+rafc:- Arrow function
+rce:- class function
+
+
+
+* npm install bootstrap 
+import "bootstrap/dist/css/bootstrap.min.css"
+
+import "bootstrap/dist/js/bootstrap.min.js"
+
+
+*for error 
+npm cache clear
+npm cache clear --force
+npm i -g create-react-app
+
+npx create-react-app [projectname]
+
+
+
+
+
+
+
+
+
+
+Framework use in reactjs 
+
+Reactjs vite framework download
+
+vite create framework:- npm create vite@latest projectname
+select framework:- React
+select varient:- Javascript
+directory :- cd project foldername
+		npm install
+		npm run dev 
+		
+* shortcut :- rconst 
+
+		setState
+		
+	   error show in javascript:- inspect and go to console
+

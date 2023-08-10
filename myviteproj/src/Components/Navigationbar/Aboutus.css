@@ -1,0 +1,141 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: 'Roboto' , sans-serif;
+}
+
+
+.bg{
+	background-image: url('Images/background.jpg') !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+#about{
+	width: 100%;
+	height: 50rem;
+	padding: 70px 20px;
+}
+
+.About .about-main{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+/* .About .about-btn{
+	background: #fac031
+	padding: 12px 25px;
+	text-decoration: none;
+	color: black;
+	position: relative;
+	left: 55%;
+	bottom: 30%;
+	top: 90px;
+} */
+
+/* .About .about-main .Image img{
+	width: 470px;
+	position: relative;
+	top: 60px;
+  /* background-image;: (Image/cookies pestry.jpg) */
+  /* background-image: url(Image-cookies pestry.jpg); */
+/* }  */
+
+.About .about-main .Image img{
+  width: 600px;
+  position: relative;
+  top: 60px;
+  padding-right: 55px;
+  /* background-image: url('Image/cookiespastry.jpg'); */
+  background-size: cover; /* Adjust as needed */
+  background-position: relative; /* Adjust as needed */
+  height: 330px; /* Set an appropriate height for the container */
+}
+
+.About .about-main .Image:hover img{
+	transform: scale(1.2);
+}
+
+/*.About .about-main .about-text h1 span{
+	color: #fff;
+	margin-right: 15px;
+	font-family: ;
+
+}*/
+
+h1{
+	color: #fff;
+	font-size: 40px;
+	position: relative;
+	margin-bottom: 50px;
+	font-family: monospace;
+}
+.About .about-main .about-text h1::after{
+	contain: 0;
+	position: absolute;
+	width: 100%;
+	height: 4px;
+	display: block;
+	margin: 0 auto;
+	/* background-color: #4caf50; */
+}
+
+h3{
+	font-size: 30px;
+	margin: 0 0 50px 0;
+	color: white;
+	/* color: white; */
+
+
+}
+p{
+	width: 650px;
+	text-align: justify;
+	margin-right: 30px;
+	line-height: 22px;
+  font-family: Time New Rommon;
+  color: white;
+
+}
+/*.About .about-btn{
+	background: #fac031
+	padding: 12px 25px;
+	text-decoration: none;
+	color: black;
+	position: relative;
+	left: 55%;
+	bottom: 30%;
+	top: 90px;
+}
+*/
+@media screen and (max-width:768px){
+	.about{
+		padding: 0px 20px;
+	}
+	.About .about-main .about-text h1{
+		font-size: 40px;
+   
+	}
+	.About .about-main .about-text h3{
+		font-size: 30px;
+	}
+	.About .about-main .about-text p{
+		font-size: 10px;
+		margin-bottom:0px;
+	}
+	.About .about-main{
+		padding: 20px;
+		flex-direction: column;
+    text-align: center;
+	}
+	.About .about-main .Image img{
+		margin-right: 0px;
+		margin-bottom: 80px;
+	}
+	.About .about-main .about-text p{
+		padding: 0px;
+		font-size: 16px;
+	}
+}
