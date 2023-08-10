@@ -1,0 +1,167 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family:'Amethysta';
+    /* background: url(images/baloon.jpg) no-repeat; */
+    /* background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.2)),url(images/web.png) no-repeat; */
+    /* background-size: cover; */
+}
+
+.main-1{
+    /* background: url(images/new.jpg) no-repeat; */
+     background: linear-gradient(),url(images/baloon.jpg) no-repeat;
+    background-size: cover;
+    /* margin-top: 70px; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+   
+.main-1 .right-sec{
+    display: flex;
+    padding-top: 85px;
+    padding-right: 50px;
+}
+
+/* .imi{
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 300px;
+    height: 185px;
+    border-radius: 25px;
+} */
+   
+.main-1 .left-sec{
+    padding-left: 20px;
+}
+   
+.left-sec h2{
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: lighter;
+    color: #242424;
+    margin-top: 0px;
+}
+   
+.left-sec h1{
+    font-size: 55px;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin: 15px 0;
+}
+   
+.left-sec p{
+    margin-bottom: 20px;
+}
+   
+.left-sec button{
+    font-family: 'Amethysta';
+    padding: 15px 45px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    background-image: linear-gradient(to right,#649bff,#0070fa,#649bff);
+    border-radius: 10px;
+}
+
+.poly{
+    display: flex;
+    border-radius: 10px;
+}
+
+div.polaroid {
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+}
+  
+.polaroid p{
+    text-align: center;
+}
+
+.boxes{
+  margin-top: 10px;
+  background: url(images/wall2.jpg) no-repeat;
+  background-size: cover;
+    /* background-color: rgb(209, 6, 141); */
+}
+ 
+.h2-txt{
+    position: relative;
+    animation: heading;
+    animation-duration: 2s;
+    animation-fill-mode: backwards;
+}
+
+.womiani{
+    animation: womini 3s linear 1s infinite;
+}
+
+.gf{
+  margin-top: 10px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.gf-2{
+  padding: 20px;
+  /* margin-top: 15px; */
+  text-align: center;
+  font-size: 20px;;
+}
+
+.he{
+    padding-top: 30px;
+    text-align: center;
+}
+
+
+.lake{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.hey:hover{
+    -ms-transform: scale(1.4); /* IE 9 */
+    /* -webkit-transform: scale(1.4); Safari 3-8 */
+    transform: scale(1.4); 
+}
+
+p .boxes{
+  text-align: center;
+}
+
+  @keyframes heading{
+    0%{top:-150px;}
+    100%{top:10px}
+  }
+
+@keyframes womini {
+    0%, 7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-12deg);
+    }
+    20% {
+      transform: rotateZ(8deg);
+    }
+    25% {
+      transform: rotateZ(-6deg);
+    }
+    30% {
+      transform: rotateZ(4deg);
+    }
+    35% {
+      transform: rotateZ(-2deg);
+    }
+    40%, 100% {
+      transform: rotateZ(0);
+    }
+}
