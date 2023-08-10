@@ -1,0 +1,132 @@
+.Kids{
+    /* background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.2)); */
+    /* background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)), url(./garmnet.jpg); */
+    /* background: linear-gradient(to bottom,green,lightgreen,transparent); */
+    background-size: cover;
+    
+    /* margin: 20px 10px; */
+    /* height: 20px; */
+    margin-top: -8rem; 
+    
+}
+.Kids .heading{
+    /* top: 20px; */
+    /* text-align: center; */
+    /* margin: 20px 0; */
+    /* color: black; */
+    font-family: sans-serif;
+   
+}
+.Kids .heading .header-text{
+    margin-top: 10rem;
+    color: black;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.Kids section{
+    padding: 10px 5%;
+    margin-top: -10rem;
+}
+section .products{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);  
+    /* grid-template-columns: repeat(auto-fit,minmax(320px,5fr)); */
+    margin-top: 9rem;
+    margin-left: -6rem;
+    padding-right: 403px;
+    padding-left: 92px;
+    
+}
+
+.products .card{
+    width: 310px;
+    /* background:linear-gradient(rgba(0,0,0,0.8),rgba(99, 111, 158, 0.679)); */
+    /* border-color:red ; */
+    /* border-radius: 20px; */
+    border: 0;
+    margin: 20px ;
+    /* background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.2)); */
+    
+}
+.products .card img{
+    height: 310px;
+    width: 258px;
+    box-shadow: 0px 10px 20px rgba(2, 150, 89, 0.3);
+    /* border-radius: 20px; */
+    border: 0;
+    /* padding: 5px ; */
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 40px;
+    
+
+}
+            /* Categories */
+/* .card .img1 img:hover{
+        content: url(./men-model.jpeg);
+}
+.card .img2 img:hover{
+    content: url(./women-model1.jpeg);
+}.card .img3 img:hover{
+    
+    content: url(./kid.avif);
+} */
+
+.card .title1{
+    font-weight: bold;
+    text-align:center;
+    margin-left: -26px;
+    font-size: 17px;
+    font-family: sans-serif;
+
+}
+.card .p-text{
+    left: 50;
+    text-align:center;
+    font-size: 16px;
+    font-family: var(--typeBasePrimary),var(--typeBaseFallback);
+    letter-spacing: var(--typeBaseSpacing);
+    margin-left: -28px;
+}
+.card .box{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: 20px     6px;
+}
+
+.card .box .size-btn a:link, .card .box .size-btn a:visited {
+    background-color: white;
+    color: black;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    /* display: inline-block; */
+    /* box-sizing: border-box; */
+    border-radius: 10px;
+    
+  }
+  
+  .card .box .size-btn a:hover, a:active {
+    background-color: lightgreen;
+    border-radius: 20px;
+  }
+/* .price{
+    color: orange;
+    font-weight: bold;
+    font-size: 20px;
+} */
+/* .btn{
+    color: indianred;
+    font-size: 13px;
+    padding: 10px 18px;
+    border: 1px solid indianred;
+    border-radius: 20px;
+
+}
+.btn:hover{
+    cursor: pointer;
+    background: indianred;
+    color: white;
+} */

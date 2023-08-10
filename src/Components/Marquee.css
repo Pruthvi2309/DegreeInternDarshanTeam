@@ -1,0 +1,52 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+
+marquee{
+    /* background:linear-gradient(to right,green,lightgreen); */
+    background: #003039;
+    background: rgb(213, 93, 56);
+    /* position:fixed; */
+    z-index: 999;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 0rem;
+    /* position:fixed;
+    z-index: 999;
+   
+}
+.marquee a{
+    text-decoration: none;
+    /* right: 0; */
+    /* background: #003039; */
+
+}
+marquee a{
+  text-decoration: none;
+}
+marquee .text-marquee{
+    display: flex;
+    justify-content: flex-start;
+    /* background: #003039; */
+}
+.text-marquee h1{
+    font-size: 48px;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke-width:1px ;
+    -webkit-text-stroke-color: white;
+    /* -webkit-text-stroke-color: white; */
+    white-space: nowrap;
+    padding: 0 6rem;
+    letter-spacing: 1px;
+    /* will-change: transform; */
+    animation: marquee 7s linear infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
