@@ -8,7 +8,7 @@
 .heading-4{
     text-align: center;
     font-size: 20px;
-    margin-top: 55px;
+    margin-top: 60px;
     color: #000000;
 }
 
@@ -116,7 +116,7 @@ h3{
 	top: 90px;
 }
 */
-@media screen and (max-width:768px){
+/* @media screen and (max-width:768px){
 	.about{
 		padding: 0px 20px;
 	}
@@ -144,4 +144,38 @@ h3{
 		padding: 0px;
 		font-size: 16px;
 	}
-}
+} */
+
+/* Your existing CSS rules */
+
+/* Media Query for screens with max-width 768px (e.g., tablets and smaller screens) */
+@media screen and (max-width: 768px) {
+	.About .about-main {
+	  flex-direction: column;
+	  text-align: center;
+	}
+	
+	.About .about-main .about-text h1 {
+	  font-size: 40px;
+	}
+	
+	.About .about-main .about-text h3 {
+	  font-size: 24px;
+	}
+	
+	.About .about-main .about-text p {
+	  font-size: 14px;
+	  margin-bottom: 0;
+	}
+	
+	.About .about-main .Image img {
+	  margin-right: 0;
+	  margin-bottom: 30px;
+	  width: 80%; /* Adjust image width for better responsiveness */
+	}
+  }
+  
+  /* Additional media queries for other screen sizes can be added here */
+  
+  /* Your existing CSS rules */
+  

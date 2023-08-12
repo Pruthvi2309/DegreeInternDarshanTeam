@@ -9,9 +9,9 @@ body{
 
 .main-1{
     /* background: url(images/new.jpg) no-repeat; */
-     background: linear-gradient(),url(images/baloon.jpg) no-repeat;
+    background: linear-gradient(rgb(0,0,0,0.2),rgb(0,0,0,0.5)) ,url(images/wp.jpg) no-repeat;
     background-size: cover;
-    /* margin-top: 70px; */
+    margin-top: 50px;
     height: 100%;
     width: 100%;
     display: flex;
@@ -21,7 +21,7 @@ body{
    
 .main-1 .right-sec{
     display: flex;
-    padding-top: 85px;
+    padding-top: 45px;
     padding-right: 50px;
 }
 
@@ -35,7 +35,7 @@ body{
 } */
    
 .main-1 .left-sec{
-    padding-left: 20px;
+    margin-left: -160px;
 }
    
 .left-sec h2{
@@ -53,10 +53,10 @@ body{
     margin: 15px 0;
 }
    
-.left-sec p{
+/* .left-sec p{
     margin-bottom: 20px;
 }
-   
+    */
 .left-sec button{
     font-family: 'Amethysta';
     padding: 15px 45px;
@@ -85,7 +85,6 @@ div.polaroid {
 }
 
 .boxes{
-  margin-top: 10px;
   background: url(images/wall2.jpg) no-repeat;
   background-size: cover;
     /* background-color: rgb(209, 6, 141); */
@@ -96,7 +95,17 @@ div.polaroid {
     animation: heading;
     animation-duration: 2s;
     animation-fill-mode: backwards;
+    background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #eeff41, #f9a825, #ff5722);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+
+.hot{
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: white;
+}
+
 
 .womiani{
     animation: womini 3s linear 1s infinite;
@@ -120,8 +129,7 @@ div.polaroid {
     text-align: center;
 }
 
-
-.lake{
+.lux{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -165,3 +173,68 @@ p .boxes{
       transform: rotateZ(0);
     }
 }
+
+
+
+/* Your existing CSS rules */
+
+/* Media Query for screens with max-width 768px (e.g., tablets and smaller screens) */
+@media (max-width: 768px) {
+  .main-1 {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .main-1 .right-sec {
+    display: none;
+  }
+  
+  .left-sec {
+    margin-left: 0;
+    text-align: center;
+  }
+  
+  .left-sec h1 {
+    font-size: 40px;
+  }
+  
+  .left-sec p {
+    font-size: 16px;
+  }
+  
+  /* Adjust other styles as needed */
+}
+
+/* Media Query for screens with max-width 480px (e.g., mobile devices) */
+@media (max-width: 480px) {
+  .main-1 {
+    padding: 20px;
+  }
+  
+  .left-sec h1 {
+    font-size: 30px;
+  }
+  
+  .hot {
+    font-size: 20px;
+  }
+  
+  .womiani {
+    display: none;
+  }
+  
+  .gf, .gf-2 {
+    font-size: 16px;
+  }
+  
+  .lux {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Adjust other styles as needed */
+}
+
+/* Additional media queries for other screen sizes can be added here */
+
+/* Your existing CSS rules */

@@ -18,7 +18,7 @@
 .heading-5{
   text-align: center;
   font-size: 20px;
-  margin-top: 55px;
+  margin-top: 60px;
   color: #000000;
 }
 
@@ -90,7 +90,7 @@
 }
 
 .input-box-5 input::placeholder{
-  padding-left: 10px;
+  /* padding-left: 5px; */
   color: rgba(42, 2, 128, 0.849);
 }
 .right-side .input-box-5 input,
@@ -102,7 +102,7 @@
   font-size: 16px;
   background: #F0F1F8;
   border-radius: 6px;
-  padding: 0 0;
+  padding: 0 10px;
   resize: none;
 }
 .right-side .message-box{

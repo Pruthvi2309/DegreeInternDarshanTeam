@@ -1,15 +1,17 @@
 import React from 'react'
 import './Signup.css';
+import { Link } from 'react-router-dom';
 
 function Signup() {
   return (
     <div>
     <main className='main-4'>
     <section class="lefi-sec">
-            <h2 className='h1-txt'>We Are Here For You</h2>
+        <img className='lower' src='images/Signup BG.gif' height={500} width={550}/>
+            {/* <h2 className='h1-txt'>We Are Here For You</h2>
             <h1>Homemade Cakes & Pastries</h1>
             <p>We are here for your service 24/7. Any help just visit our website.</p>
-            <button>More product</button>
+            <button>More product</button> */}
     </section>
 
     <section className='right-sec'>
@@ -37,7 +39,7 @@ function Signup() {
                 <input type='text' placeholder='Enter Password' required/><box-icon name='lock'></box-icon>
             </div>
 
-            <button type='submit' className="btn1">Register</button>
+            <Link to='/'><button type='submit' className="btn1">Register</button></Link>
         </form>
         </div> 
         </div>

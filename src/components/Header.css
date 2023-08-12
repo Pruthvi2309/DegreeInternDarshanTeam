@@ -7,7 +7,7 @@ body{
     top: 0;
     right: 0;left: 0;
     background-color: transparent;
-    background-color: #8c52ff;
+    background-color: #30ddf8;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -24,6 +24,7 @@ body{
     height: 25px;
 }
 .header .logoContent .logoName {
+  margin-top: 10px;
     color: black;
     font-size: 15px;
     font-weight: bolder;
@@ -45,4 +46,53 @@ body{
     display: none;
 }
   
- 
+
+.mobileMenuIcon {
+    display: none; /* Hide the menu icon by default */
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+/* Media Query for Responsive Design */
+
+@media (max-width: 768px) {
+  .header {
+    padding: 5px; /* Adjust the padding for smaller screens */
+  }
+
+  .header .navbar {
+    flex-direction: column; /* Stack navigation links vertically */
+    background-color: rgba(48, 221, 248, 0.95); /* Adjust the background color */
+    position: absolute;
+    top: 60px; /* Adjust the positioning for smaller screens */
+    right: 0;
+    left: 0;
+    display: none; /* Hide navigation links by default */
+    z-index: 999;
+  }
+
+  .header .navbar a {
+    font-size: 14px; /* Decrease font size for smaller screens */
+    margin: 10px 0; /* Add space between navigation links */
+  }
+
+  .mobileMenuIcon {
+    display: block; /* Display the menu icon on small screens */
+  }
+
+  .navbar.open {
+    display: flex;
+    flex-direction: column;
+    margin-top: -15px;
+    /* Additional styles to make the menu visible when open */
+  }
+
+  #menu-bar {
+    display: block; /* Display a menu icon for opening navigation links */
+    font-size: 18px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+}
+

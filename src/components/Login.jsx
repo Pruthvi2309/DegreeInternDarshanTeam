@@ -7,7 +7,7 @@ function Login() {
     <div>
     <main className='main-3'>
     <section className="lefi-sec">
-    <img src='images/womi2.jpg'></img>
+        <center><img className='lower' src='images/Login BG.gif' height={550} width={550}></img></center>
     </section>
 
     <section className='right-sec'>

@@ -5,7 +5,7 @@ function AboutUs() {
   return (
     <>
     <div className="heading-4">
-            <h1><center>About Us</center></h1>
+            <h2><center>About Us</center></h2>
         </div>
     <div className='bg'>
     <div className="About" id="about">

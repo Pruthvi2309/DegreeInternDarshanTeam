@@ -1,0 +1,148 @@
+*{
+    font-family: 'Amethysta';
+}
+
+
+.bag{
+    margin-left: 1.6rem;
+    align-items: center;
+}
+
+.heart{
+    margin-left: 1.6rem;
+    align-items: center;
+}
+
+main{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    padding-left: 200px;
+}
+
+.veg{
+    margin-bottom: 6px;
+}
+.p-card {
+    gap: 10px;
+    margin-top: 5px;
+    width: 112px;
+    height: 160px;
+    justify-content: space-between;
+    border-radius: 5px;
+    padding: 5px;
+    background-image: linear-gradient(#3ce9e0,transparent);  
+}
+.p-card:hover{
+     border: 1px solid red;
+}
+
+.variant{
+    margin-top: 15px;
+}
+
+.hide{
+    margin-top: 20px;
+    display: flex;
+    gap: 30px;
+}
+
+.lake{
+    width: 550px;
+    height: 450px;
+    margin-top:10px;
+    position: sticky;
+    padding-left: 100px;
+  
+}
+
+.river{
+    width: 100px;
+    height: 100px;
+}
+
+.col-md-6{
+    margin-top: 90px;
+}
+
+.p{
+    color: #3d14af;
+    font-weight: bold;
+}
+
+hr{
+    width: 500px;
+}
+
+.p1-price{
+    color: #3d14af;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.drop-down{
+    margin-top: 5px;
+    width: 300px;
+    height: 40px;
+    font-size: 15px;
+    color: #010002;
+    background-image: linear-gradient(#3ce9e0,transparent);
+    text-align: center;
+}
+
+.drop-down:hover{
+    border:1px solid rgb(230, 138, 19)
+}
+
+.Message{
+    margin-top: 5px;
+    width: 400px;
+    height: 40px;
+    font-size: 15px;
+    color: #0c0b0c;
+    background-image: linear-gradient(#3ce9e0,transparent);
+    text-align: center;
+}
+
+.butn{
+    background-color: rgb(255, 255, 255);
+    height: 60px;
+    text-align: center;
+    position: sticky;
+    bottom: 0px;
+}
+
+.b-button{
+    font-weight: bold;
+    padding: 5px 30px;
+    background-color: #0e3e72;
+    margin: auto;
+    color: #fdf7f7;
+    text-align: center;
+    border:5px;
+    border-radius: 0px;
+    cursor: pointer; 
+}
+
+.wishlist{
+    margin-left: 10px;
+    font-weight: bold;
+    padding: 5px 30px;
+    background-color: #3bb44f;
+    margin: auto;
+    color: #000000;
+    text-align: center;
+    border:5px;
+    border-radius: 0px;
+    cursor: pointer; 
+}
+
+.wishlist:hover{
+    background-color: #97e6e6;
+}
+
+.b-button:hover {
+    background-color: #97e6e6;
+}
+
+

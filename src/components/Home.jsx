@@ -1,6 +1,7 @@
 import React from 'react'
 import './Home.css';
 import Footer from './Footer';
+import { Link } from 'react-router-dom'
 
 function Home() {
   return (
@@ -10,8 +11,8 @@ function Home() {
         <section class="left-sec">
           {/* <h2 className='h1-txt'>We Are Here For You</h2> */}
           <h1 className='h2-txt'>Daily Delights</h1>
-          <p>Cakes and bakes from the house of Queens!</p>
-          <button>More product</button>
+          <p className='hot'>Cakes and bakes from the <br/> house of Queens!</p>
+          <Link to='/product'><button>More product</button></Link>
         </section>
 
         <section class="right-sec">
@@ -21,10 +22,10 @@ function Home() {
 
       <div className='boxes'>
           <h1 className='he'>Cakes</h1>
-          <div className='lake'> 
-              <div className='hey'><img className='lin' src='images/cake01.png' height={250} width={250}/></div> 
-              <div className='hey'><img className='lin' src='images/cake02.png' height={250} width={250}/></div>
-              <div className='hey'><img className='lin' src='images/cake03.png' height={250} width={250}/></div>
+          <div className='lux'> 
+              <div className='hey'><img className='lin' alt='img1' src='./images/cake01.png' height={250} width={250}/></div> 
+              <div className='hey'><img className='lin' src='./images/cake02.png' height={250} width={250}/></div>
+              <div className='hey'><img className='lin' src='./images/cake03.png' height={250} width={250}/></div>
               <div className='hey'><img className='lin' src='images/cake04.png' height={250} width={250}/></div>
           </div>  
 
@@ -33,7 +34,7 @@ function Home() {
           </div>   
     
           <h1 className='he'>Pastries</h1>
-          <div className='lake'> 
+          <div className='lux'> 
               <div className='hey'><img className='lin' src='images/patisserie01.png' height={250} width={250}/></div> 
               <div className='hey'><img className='lin' src='images/patisserie02.png' height={250} width={250}/></div>
               <div className='hey'><img className='lin' src='images/patisserie03.png' height={250} width={250}/></div>

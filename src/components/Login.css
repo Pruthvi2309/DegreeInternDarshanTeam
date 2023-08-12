@@ -5,8 +5,12 @@
     font-family: 'Amethysta';
 }
 
+.lower{
+    mix-blend-mode: multiply;
+    filter: contrast(1);
+}
 .main-3{
-    /* background: url(images/new.jpg); */
+    /* background: url(images/erp2.png); */
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: 50px;
@@ -17,7 +21,7 @@
 }
 
 .main-3 .lefi-sec{
-    padding-left: 20px;
+    margin-left: -100px;
 }
 
 .lefi-sec h2{
