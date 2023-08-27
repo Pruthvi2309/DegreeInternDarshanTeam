@@ -22,6 +22,7 @@ import Product5 from './components/hem/Product5'
 import Product6 from './components/hem/Product6'
 import Product7 from './components/hem/Product7'
 import Product8 from './components/hem/Product8'
+import Addproduct from './components/afterlogin/Addproduct'
 
 export function App() {
   const [count, setCount] = useState(0)
@@ -37,21 +38,23 @@ export function App() {
       {/* <Login/> */}
       {/* <Signup/> */}
       <Routes> 
-        <Route path='/' element={<Home/>}/>
-        <Route path='/product' element={<Product/>}/>
-        <Route path='/about' element={<Aboutus/>}/>
-        <Route path='/contact' element={<Contactus/>}/>
-        <Route path='/login' element={<Login/>}/>
+        <Route path='/' exact element={<Home/>}/>
+        <Route path='/product' exact element={<Product/>}/>
+        <Route path='/about' exact element={<Aboutus/>}/>
+        <Route path='/contact' exact element={<Contactus/>}/>
+        <Route path='/login'exact element={<Login/>}/>
         <Route path='/register' element={<Signup/>}/>
-        <Route path='/product1' element={<Product1/>}/>
-        <Route path='/product2' element={<Product2/>}/>
-        <Route path='/product3' element={<Product3/>}/>
-        <Route path='/product4' element={<Product4/>}/>
-        <Route path='/product5' element={<Product5/>}/>
-        <Route path='/product6' element={<Product6/>}/>
-        <Route path='/product7' element={<Product7/>}/>
-        <Route path='/product8' element={<Product8/>}/>
+        <Route path='/product1'exact element={<Product1/>}/>
+        {/* <Route path='/product2' element={<Product2/>}/> */}
+        {/* <Route path='/product3' element={<Product3/>}/> */}
+        {/* <Route path='/product4' element={<Product4/>}/> */}
+        {/* <Route path='/product5' element={<Product5/>}/> */}
+        {/* <Route path='/product6' element={<Product6/>}/> */}
+        {/* <Route path='/product7' element={<Product7/>}/> */}
+        {/* <Route path='/product8' element={<Product8/>}/> */}
+        <Route path='/addproduct' exact element={<Addproduct/>}/>
       </Routes>
+      {/* <Addproduct/> */}
       <Footer/>
     </>
   )

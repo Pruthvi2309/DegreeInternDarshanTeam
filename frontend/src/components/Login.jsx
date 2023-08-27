@@ -1,25 +1,37 @@
 import React, {useState} from 'react'
 import './Login.css';
-import { Link } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
+// import axios from 'axios';
+// import Validation from './LoginValidation';
 
 function Login() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
-    // const [loginStatus, setLoginStatus] = useState("")
-   
-    const login = (e) => {
-        e.preventDefault();
-        axios.post("http://localhost:3000/login",{
-            email:email,
-            password:password
-        }).then((response) => {
-            if(response.data.message){
-                setLoginStatus(response.data.message);
+    const navigate = useNavigate();
+
+    //Logic for login into website.
+    const fetchData = async () => {
+        const userData = {email, password};
+
+        try{
+            const response = await fetch('http://localhost:3000/login',{
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, password }),     
+            });
+
+            const data = await response.json();
+            if(data.success){
+                navigate('/');
+                localStorage.setItem("items",JSON.stringify(userData));
             }
             else{
-                setLoginStatus(response.data[0].email);
+                alert('Invalid Credentials');
             }
-        })
+            }
+            catch(error){
+                console.error('Error logging in :', error);
+            }
     }
   return (
     <div>
@@ -32,22 +44,24 @@ function Login() {
     <div className='flow'>
             {/* <img src="images/cake.jpg"/> */}
         <div className='wrapper'>
-        <form>
+        <form action=''>
             <h1>Login</h1>
             <div className="input-box">
-                <input type='text' onChange={(e) => {setEmail(e.target.value)}} placeholder='Enter Your Email' required/><box-icon className='thin' name='mail-send'></box-icon>
+                <input type='email' onChange={(e) => {setEmail(e.target.value)}} name = "email" placeholder='Enter Your Email' value={email} required/><box-icon className='thin' name='mail-send'></box-icon>
+                {/* {errors.email && <span className='text-danger'>{errors.email}</span>} */}
             </div>
 
             <div className="input-box">
-                <input type='password' onChange={(e) => {setPassword(e.target.value)}}  placeholder='Enter Password' required/><box-icon className='thin' name='lock'></box-icon>
+                <input type='password' onChange={(e) => {setPassword(e.target.value)}} name="password" placeholder='Enter Password' value={password} required/><box-icon className='thin' name='lock'></box-icon>
+                {/* {errors.password && <span className='text-danger'>{errors.password}</span>} */}
             </div>
 
             <div className="remeber">
                 <label><input type='checkbox'/> Remeber Me</label>
-                <a href='Signup.jsx'>Forgot password</a>
+                <Link to='/forgot'>Forgot password</Link>
             </div>
 
-            <button type='submit' className="btn">Login</button>
+           <button type='submit' onClick={fetchData} className="btn">Login</button>
 
             <div className="register">
                 <p>Don't have an account?<Link to='/register'>Register</Link></p>

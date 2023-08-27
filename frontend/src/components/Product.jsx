@@ -1,8 +1,38 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import './Product.css'
 import {Link} from 'react-router-dom'
 
 function Product() {
+    // const url = "http://localhost:3000/prodi";
+    const [data, setData] = useState([]);
+
+    // const fetchInfo = () => {
+    //     return fetch(url)
+    //     .then((res) => res.json())
+    //     .then((d) => setData(d.data))
+    //     .catch((error) => {
+    //         console.log("Error fetching data:", error);
+    //         setData([]);
+    //     });
+    // };
+    const fetchInfo = async () => {
+        try{
+            const response = await fetch("http://localhost:3000/prodi",{
+                method: 'get',
+                headers: {'Content-Type':'application/json'},
+            });
+
+            const responseData = await response.json();
+            setData(responseData);
+        }
+        catch(error){
+            console.error('Error fetching data',error);
+        }
+        }
+
+    useEffect(() => {
+        fetchInfo();
+    }, []);
   return (
     <div>
         <div className="heading">
@@ -10,36 +40,40 @@ function Product() {
         </div>
 
         <section className='prodi'>
-        <div className="product-card">
-            <Link to='/product1'><img src="images/P1.jpg" alt="Product Image"/></Link>
-            <h2 className="product-title"><center>Red Velvet Cake</center></h2>
-            <span className="product-price"><center>Rs.600</center></span>
+            {data.map((curelem)=> {
+                const img = "product/"+curelem.pid+".jpg";
+                return (
+        <div className="product-card" key={curelem.pid}>
+            <Link to='/product1'><img src={img} alt="Product Image"/></Link>
+            <h2 className="product-title"><center>{curelem.pname}</center></h2>
+            <span className="product-price"><center>Rs{curelem.pprice}</center></span>
             <button className="buy-button">Buy Now</button>
         </div>
+        // <div className="product-card">
+        //     <Link to='/product2'><img src="images/P2.jpg" alt="Product Image"/></Link>
+        //     <h2 className="product-title"><center>Chocolate Cake</center></h2>
+        //     <span className="product-price"><center>Rs.550</center></span>
+        //     <button className="buy-button">Buy Now</button>
+        // </div>
 
-        <div className="product-card">
-            <Link to='/product2'><img src="images/P2.jpg" alt="Product Image"/></Link>
-            <h2 className="product-title"><center>Chocolate Cake</center></h2>
-            <span className="product-price"><center>Rs.550</center></span>
-            <button className="buy-button">Buy Now</button>
-        </div>
+        // <div className="product-card">
+        //     <Link to='/product3'><img src="images/P3.jpg" alt="Product Image"/></Link>
+        //     <h2 className="product-title"><center>Vanilla Cupcake</center></h2>
+        //     <span className="product-price"><center>Rs.200</center></span>
+        //     <button className="buy-button">Buy Now</button>
+        // </div>
 
-        <div className="product-card">
-            <Link to='/product3'><img src="images/P3.jpg" alt="Product Image"/></Link>
-            <h2 className="product-title"><center>Vanilla Cupcake</center></h2>
-            <span className="product-price"><center>Rs.200</center></span>
-            <button className="buy-button">Buy Now</button>
-        </div>
-
-        <div className="product-card">
-            <Link to='/product4'><img src="images/P4.jpg" alt="Product Image"/></Link>
-            <h2 className="product-title"><center>Chocolate Cupcake</center></h2>
-            <span className="product-price"><center>Rs.250</center></span>
-            <button className="buy-button">Buy Now</button>
-        </div>
+        // <div className="product-card">
+        //     <Link to='/product4'><img src="images/P4.jpg" alt="Product Image"/></Link>
+        //     <h2 className="product-title"><center>Chocolate Cupcake</center></h2>
+        //     <span className="product-price"><center>Rs.250</center></span>
+        //     <button className="buy-button">Buy Now</button>
+        // </div>
+                )
+                })};
         </section>
 
-        <section className="prodi">
+        {/* <section className="prodi">
         <div className="product-card">
             <Link to='/product5'><img src="images/P5.jpg" alt="Product Image"/></Link>
             <h2 className="product-title"><center>Black Forest Cake</center></h2>
@@ -67,7 +101,7 @@ function Product() {
             <span className="product-price"><center>Rs.645</center></span>
             <button className="buy-button">Buy Now</button>
         </div>
-        </section>
+        </section> */}
     </div>
   )
 }

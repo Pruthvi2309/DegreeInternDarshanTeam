@@ -20,6 +20,28 @@ function Home() {
         </section>
       </main>
 
+    <div className="logos">
+      <div className="logos-slide">
+        <img src="slider/1.jpg"/>
+        <img src="slider/2.jpg" />
+        <img src="slider/3.jpg" />
+        <img src="slider/4.jpeg" />
+        <img src="slider/5.jpg" />
+        <img src="slider/6.jpg" />
+        <img src="slider/7.jpeg" />
+      </div>
+
+      <div className="logos-slide">
+        <img src="slider/1.jpg" />
+        <img src="slider/2.jpg" />
+        <img src="slider/3.jpg" />
+        <img src="slider/4.jpeg" />
+        <img src="slider/5.jpg" />
+        <img src="slider/6.jpg" />
+        <img src="slider/7.jpeg" />
+      </div>
+      </div>
+
       <div className='boxes'>
           <h1 className='he'>Cakes</h1>
           <div className='lux'> 

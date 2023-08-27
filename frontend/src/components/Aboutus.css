@@ -6,7 +6,7 @@
 }
 
 .backgro{
-	background: url(images/wave-haikei.png) no-repeat;
+	/* background: url(images/wave-haikei.png) no-repeat; */
 	background-size: cover;
 }
 
@@ -178,7 +178,7 @@ h3{
 	.About .about-main .Image img {
 	  margin-right: 0;
 	  margin-bottom: 30px;
-	  width: 80%; /* Adjust image width for better responsiveness */
+	  width: 100%; 
 	}
   }
   

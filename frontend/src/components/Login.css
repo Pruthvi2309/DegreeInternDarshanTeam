@@ -178,3 +178,38 @@
 .register p a:hover{
     text-decoration: underline;
 }
+
+@media screen and (max-width: 768px) {
+    .main-3 {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        text-align: center; /* Center-align text on smaller screens */
+    }
+
+    .lefi-sec {
+        margin-left: 0; /* Reset margin for left section on smaller screens */
+    }
+
+    .lefi-sec h1 {
+        font-size: 45px; /* Adjust font size for smaller screens */
+    }
+
+    /* Add more responsive styles as needed */
+}
+
+/* Media query for mobile phones */
+@media screen and (max-width: 480px) {
+    .main-3 .right-sec {
+        padding-right: 20px; /* Adjust padding for the right section on smaller screens */
+    }
+
+    .wrapper {
+        width: 90%; /* Adjust the width of the wrapper for smaller screens */
+        margin-top: -30px; /* Adjust margin-top for smaller screens */
+    }
+
+    .wrapper h1 {
+        font-size: 30px; /* Adjust font size for smaller screens */
+    }
+
+    /* Add more responsive styles as needed */
+}

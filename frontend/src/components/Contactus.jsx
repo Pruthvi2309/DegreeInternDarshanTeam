@@ -1,7 +1,37 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Contactus.css'
+import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'preact/hooks';
+
 
 export const Contactus = () => {
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [message, setMessage] = useState("")
+
+  const navigate = useNavigate();
+  useEffect(() => {
+    const auth = localStorage.getItem('items');
+    if(auth){
+      navigate('/')
+    }
+  })
+
+  const contactData = async(req, res) => {
+    console.warn(name, email, message);
+    let result = await fetch('http://localhost:3000/contact', {
+        method: 'POST',
+        body: JSON.stringify({name, email, message}),
+        headers: {'Content-Type':'application/json'},
+    });
+    result = await result.json();
+    console.warn(result);
+    localStorage.setItem("items", JSON.stringify(result));
+    if (result){
+        navigate('/')
+    }
+}
+
   return (
     <>
     <div className="heading-5">
@@ -40,20 +70,20 @@ export const Contactus = () => {
         </p>
         <form action="#">
           <div className="input-box-5">
-            <input type="text" placeholder="Enter your name" />
+            <input type="text" onChange={(e) => {setName(e.target.value)}} placeholder="Enter your name" />
           </div>
           <div className="input-box-5">
-            <input type="email" placeholder="Enter your email" />
+            <input type="email" onChange={(e) => {setEmail(e.target.value)}} placeholder="Enter your email" />
           </div>
           {/* <div className="input-box message-box">
             <input type="text" placeholder="Type Your Message" />
           </div> */}
           <div className="input-box-5">
             {/*<input type="text" placeholder="Type Your Message" />*/}
-            <textarea rows="4" cols="50" name="comment" form="usrform" placeholder="Type Your Message"></textarea>
+            <textarea onChange={(e) => {setMessage(e.target.value)}} rows="4" cols="50" name="comment" form="usrform" placeholder="Type Your Message"></textarea>
           </div>
           <div>
-            <button className="button-23" type="submit">Send Now</button>
+            <button onClick={contactData} className="button-23" type="submit">Send Now</button>
           </div>
         </form>
       </div>

@@ -14,6 +14,8 @@ const con = mysql.createConnection({
     database:'cake'
 })
 
+
+//Data Enter through Signup Page
 app.post('/register',(req,res)=>{
     const name = req.body.name;
     const bday = req.body.bday;
@@ -33,26 +35,58 @@ app.post('/register',(req,res)=>{
     }
 })
 
-app.post('/login',(req,res)=>{
-    const email = req.body.email;
-    const password = req.body.password;
 
-    con.query("SELECT * FROM signup WHERE email = ? AND password = ?",[email, password]),
+//Data Enter through ContactUS Page
+app.post('/contact',(req,res)=>{
+    const name = req.body.name;
+    const email = req.body.email;
+    const message = req.body.message;
+
+    con.query("INSERT INTO contact (name, email, message) VALUES (?, ?, ?)",[name, email, message]),
     (err, result) => {
-        if(err){
-            req.setEncoding({err: err});
+        if(result){
+            res.send(result);
         }
         else
         {
-           if(result.length > 0){
-            res.send(result);
-           }
-           else{
-            res.send({message:"Wrong username or password"});
-           }
+            res.send({message:"Enter correct asked details"})
         }
     }
 })
+
+//Data fetch and login in wesbite using Login Page
+app.post('/login',(req, res) => {
+    const {email , password} = req.body;
+
+    con.query('SELECT * FROM signup WHERE email = ? AND password = ?',[email, password], (error, result) => {
+        if(error){
+            res.send({success: false, message: 'Error in connecting to API'});
+        }
+        else {
+            if(result.length === 1){
+                res.send({success: true, message: 'Login Successful'});
+            }
+            else {
+                res.send({success: false, message: 'Invalid credentials'});
+            }
+        }
+    });
+});
+
+//Fetch data from database in product page
+app.get('/prodi',(req,res) => {
+    const query = "SELECT * FROM product";
+    con.query(query, (error, results) => {
+        if(error){
+            console.log('Error executin MySQL query:', error);
+            res.send({ status: 'error', message: 'Failed to fetch data'});
+        }
+        else{
+            console.log('Data retrived successfully');
+            res.send(results)
+        }
+    });
+});
 
 
 app.listen(3000, ()=>{

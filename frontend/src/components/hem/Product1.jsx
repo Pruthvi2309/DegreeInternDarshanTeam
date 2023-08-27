@@ -1,13 +1,36 @@
-import React from 'react'
+import React, {useState, useEffect } from 'react'
 import'./Product1.css';
 // import RatingStar2 from '../ratingstar/RatingStar2';
 
 function Product1() {
+  const [data, setData] = useState([]);
+  const fetchInfo = async () => {
+    try{
+        const response = await fetch("http://localhost:3000/prodi",{
+            method: 'get',
+            headers: {'Content-Type':'application/json'},
+        });
+
+        const responseData = await response.json();
+        setData(responseData);
+    }
+    catch(error){
+        console.error('Error fetching data',error);
+    }
+    }
+
+useEffect(() => {
+    fetchInfo();
+}, []);
   return (
     <>
+      {data.map((elem) => {
+        const img = "product/"+elem.pid+".jpg";
+        return (
+          
     <div className="row">
-        <div className="col-md-6">
-        <img className='lake'src="images/P1.jpg"/>
+        <div className="col-md-6" key={elem.pid}>
+        <img className='lake'src={img}/>
         </div>
 
         <div className="col-md-6 desc">
@@ -25,13 +48,13 @@ function Product1() {
 
         <div className='hide'>
           <div className='p-card'>
-           <img className='river' src="images/P1.jpg" alt="Product Image"/><br></br>
+           <img className='river' src={img} alt="Product Image"/><br></br>
             <span className="price">500 gm</span><br></br>
             <span className="p">Rs.600</span>
           </div>
 
           <div className='p-card'>
-           <img className='river'src="images/P1.jpg" alt="Product Image"/><br></br>
+           <img className='river'src={img} alt="Product Image"/><br></br>
             <span className="price">1 kg</span><br></br>
             <span className="p">Rs.1200</span>
           </div>
@@ -56,7 +79,10 @@ function Product1() {
             <button className="wishlist">Wishlist<box-icon className='heart' name='heart' ></box-icon></button>
           </footer>
       </div>
+      
     </div>
+      )
+    })}
     </>
   )
 }
