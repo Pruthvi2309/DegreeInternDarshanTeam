@@ -6,7 +6,8 @@
     
     /* margin: 20px 10px; */
     /* height: 20px; */
-    margin-top: -8rem; 
+    margin-top: -9rem; 
+    background-color: white;
     
 }
 .Kids .heading{
@@ -20,9 +21,11 @@
 .Kids .heading .header-text{
     margin-top: 10rem;
     color: black;
-    text-align: center;
+    text-align: left;
+    margin-left: 6.3rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
 
 .Kids section{
     padding: 10px 5%;
@@ -36,6 +39,22 @@ section .products{
     margin-left: -6rem;
     padding-right: 403px;
     padding-left: 92px;
+    margin-bottom: -10rem;
+    
+}
+.Kids sec1{
+    padding: 10px 5%;
+    margin-top: -10rem;
+}
+sec1 .products{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);  
+    /* grid-template-columns: repeat(auto-fit,minmax(320px,5fr)); */
+    margin-top: rem;
+    margin-left: -6rem;
+    padding-right: 403px;
+    padding-left: 92px;
+    margin-bottom: -10rem;
     
 }
 
@@ -94,6 +113,8 @@ section .products{
     align-items:center;
     justify-content: space-between;
     padding: 20px     6px;
+    padding-top: 0px;
+    padding-left: 11px;
 }
 
 .card .box .size-btn a:link, .card .box .size-btn a:visited {
@@ -108,7 +129,7 @@ section .products{
     
   }
   
-  .card .box .size-btn a:hover, a:active {
+  .card .box .size-btn a:hover {
     background-color: lightgreen;
     border-radius: 20px;
   }
@@ -130,3 +151,32 @@ section .products{
     background: indianred;
     color: white;
 } */
+.card .img a:active{
+    background-color: white;
+}
+.hello .explr-link{
+    color: black;
+    
+    
+}
+.hello .explr-link .btn:active{
+background-color: white;
+
+}
+section .hello{
+    margin-left: 38rem;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,9 +1,14 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Header.css'
 import { Link } from 'react-router-dom'
 
-
 function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <>
       
@@ -13,14 +18,21 @@ function Header() {
         {/* <div className='logo'></div> */}
         
         <nav className='navig'>
+        <div className='hamburger' onClick={toggleMenu}>
+              {menuOpen ? (
+                <i className="fa-regular fa-circle-xmark"></i>
+              ) : (
+                <i className="fa-solid fa-bars"></i>
+              )}
+           </div>
           <div className='title'>
           Aesthetics
           </div>
+          <div className='category1'> 
+            <Link className='back1' to="/"><button className='men-btn'>Home</button></Link>
+          </div> 
           <div className='category1'>
-            <Link to="/"><button className='men-btn'>Home</button></Link>
-          </div>
-          <div className='category1'>
-            <Link to="/Men"> <button className='men-btn'>Men</button></Link>
+            <Link className='back1' to="/Men"> <button className='men-btn'>Men</button></Link>
             <div className='content1'>
             <Link to="/Men-Shirts">Shirts</Link>
             <Link to="/Men-Tshirts">T-Shirts</Link>
@@ -30,7 +42,7 @@ function Header() {
           
 
           <div className='category2'>
-          <Link to="/Women"> <button className='men-btn'>Women</button></Link>
+          <Link className='back1' to="/Women"> <button className='men-btn'>Women</button></Link>
             <div className='content2'>
             <Link to="/Women-Shirts">Shirts</Link>
             <Link to="/Women-Tshirts">T-Shirts</Link>
@@ -39,7 +51,7 @@ function Header() {
           </div>
 
           <div className='category3'>
-          <Link to="/Kids"> <button className='men-btn'>Kids</button></Link>
+          <Link className='back1' to="/Kids"> <button className='men-btn'>Kids</button></Link>
             <div className='content3'>
             <Link to="/Kids-Shirts">Shirts</Link>
             <Link to="/Kids-Tshirts">T-Shirts</Link>
@@ -68,22 +80,22 @@ function Header() {
           <a href="#">Contact Us</a>
           </div> */}
           <div className='Login'>
-         <a href="#"><i class="fa-solid fa-user"></i></a>
+         <a className='hem' href="https://www.snitch.co.in/account" target='/_blank0'><i class="fa-solid fa-user"></i></a>
          
           </div>
           <div className='Cart'>
-         <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+         <a className='hem' href="#"><i class="fa-solid fa-cart-shopping"></i></a>
          
           </div>
           <div className='Heart'>
-         <a href="#"><i class="fa-regular fa-heart"></i></a>
+         <a className='hem' href="#"><i class="fa-regular fa-heart"></i></a>
          
           </div>
           {/* <div className='Heart'>
          <a href="#"><i class="fa-regular fa-heart"></i></a>
          
           </div> */}
-          
+         
 
 
         </nav>

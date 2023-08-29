@@ -18,7 +18,7 @@
    
 }
 .Men-Trouser .heading .header-text{
-    margin-top: 10rem;
+    margin-top: 18rem;
     color: black;
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -75,25 +75,42 @@ section .products{
 
 .card .title1{
     font-weight: bold;
-    text-align:center;
-    margin-left: -26px;
+    text-align:left;
+    margin-left: 16px;
     font-size: 17px;
     font-family: sans-serif;
 
 }
 .card .p-text{
     left: 50;
-    text-align:center;
+    text-align:left;
     font-size: 16px;
-    font-family: var(--typeBasePrimary),var(--typeBaseFallback);
+    font-family: sans-serif;
+    color: green;
+    font-weight: 700;
     letter-spacing: var(--typeBaseSpacing);
-    margin-left: -28px;
+    margin-left: 17px;
+}
+.card .old-pr {
+    margin-left:4rem;
+    text-align:left;
+    font-size: 16px;
+    font-family: sans-serif;
+    color: green;
+    font-weight: 700;
+    letter-spacing: var(--typeBaseSpacing);
+    margin-top:-2.48rem;
+    color: #f64749;
+    text-decoration: line-through;
 }
 .card .box{
     display: flex;
     align-items:center;
     justify-content: space-between;
     padding: 20px     6px;
+    padding-top: 0px;
+    padding-left: 11px;
+
 }
 
 .card .box .size-btn a:link, .card .box .size-btn a:visited {

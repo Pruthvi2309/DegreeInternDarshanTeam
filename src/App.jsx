@@ -1,21 +1,23 @@
 import { useState } from 'react'
 
 import './App.css'
-
+import { Route, Routes } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
+
+import Login from './Components/Login'
+import Register from './Components/Register'
+
+import NewNav from './Components/NewNav'
 import Footer from './Components/Footer'
-import Header from './Components/Header'
-
-// import Homepage from './Components/Homepage'
-// import Men from './Components/Men' 
-
-import Menpage from './Components/Menpage'
 import Marquee from './Components/Marquee' 
+
+import Des from './Components/Des'
+import Homepage from './Components/Homepage'
+import Menpage from './Components/Menpage'
 import Women from './Components/Women'
 import Kids from './Components/Kids'
-import { Route, Routes } from 'react-router-dom'
-import MenShirt from './MenShirt'
+import MenShirt from './Components/MenShirt'
 import MenTrouser from './Components/MenTrouser'
 import MenTshirt from './Components/MenTshirt'
 import WomenShirt from './Components/WomenShirt'
@@ -34,37 +36,45 @@ function App() {
   return (
     <>
         <Marquee/>
-        <Header/> 
+        <NewNav/> 
+        {/* <Login/>   */}
+        {/* <Register/> */}
         <Routes>
-        {/* <Route path='/' element={<Homepage/>}/> */}
+        <Route path='/' element={<Homepage/>}/>  
         <Route path='/Men' element={<Menpage/>}/>
         <Route path='/Women' element={<Women/>}/>
-        <Route path='/Kids' element={<Kids/>}/>
+        <Route path='/Kids' element={<Kids/>}/> 
+        <Route path='/Desc' element={<Des/>}/> 
+        <Route path='/Register' element={<Register/>}/> 
+        <Route path='/Login' element={<Login/>}/> 
 
         <Route path='/Men-Shirts' element={<MenShirt/>}/>
         <Route path='/Men-Tshirts' element={<MenTshirt/>}/>
         <Route path='/Men-Trouser' element={<MenTrouser/>}/> 
 
-        <Route path='/Women-Shirts' element={<WomenShirt/>}/>
-        <Route path='/Women-Tshirts' element={<WomenTshirt/>}/>
-        <Route path='/Women-Trouser' element={<WomenTrouser/>}/> 
-
         <Route path='/Kids-Shirts' element={<KidsShirt/>}/>
         <Route path='/Kids-Tshirts' element={<KidsTshirt/>}/>
         <Route path='/Kids-Trouser' element={<KidsTrouser/>}/> 
-       </Routes>
 
+        <Route path='/Women-Shirts' element={<WomenShirt/>}/>
+        <Route path='/Women-Tshirts' element={<WomenTshirt/>}/>
+        <Route path='/Women-Trouser' element={<WomenTrouser/>}/> 
+       </Routes>
+       
+       
+        {/* <WomenTshirt/> */}
         {/* <Women/> */}
         {/* <Kids/> */}
-       
+       {/* <Desc/> */}
       {/* <Homepage/> */}
       {/* <Men/> */}
-
+      {/* <MenShirt/> */}
       {/* <Menpage/> */}
      
-      
+      {/* <Slider/> */}
+      {/* <Homepage/> */}
       <Footer/>
-    
+       {/* <Styled/> */}
     </>
   )
 }

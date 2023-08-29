@@ -1,0 +1,63 @@
+#app { height: 100% }
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  /* background:linear-gradient(to right,rgba(0,0,0,0.7),rgba(0,0,0,0.3));*/
+  background-color: whitesmoke;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: 10rem;
+  height: 81vh;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 80vh;
+  /* margin-left: 4rem; */
+  margin-top: -3rem;
+}
+
+@media screen and (max-width: 786px) {
+  .swiper {
+    padding-top: 30px; /* Adjust padding for smaller screens */
+    padding-bottom: 30px; /* Adjust padding for smaller screens */
+    margin-top: 5rem; /* Adjust margin-top for smaller screens */
+    height: auto; /* Allow height to adjust to content */
+  }
+
+  .swiper-slide {
+    width: 100%; /* Full width for smaller screens */
+    height: auto; /* Allow height to adjust to content */
+  }
+
+  .swiper-slide img {
+    height: auto; /* Allow height to adjust to content */
+    margin-top: 0; /* Reset margin-top for smaller screens */
+    /* height: 80vh; */
+  /* margin-left: 4rem; */
+  margin-top: 3rem;
+  /* height: 50vh; */
+  }
+}

@@ -6,7 +6,7 @@
     
     /* margin: 20px 10px; */
     /* height: 20px; */
-    margin-top: -8rem; 
+    margin-top: 0rem; 
     
 }
 .Women .heading{
@@ -94,6 +94,9 @@ section .products{
     align-items:center;
     justify-content: space-between;
     padding: 20px     6px;
+    padding-top: 0px;
+    padding-left: 11px;
+
 }
 
 .card .box .size-btn a:link, .card .box .size-btn a:visited {
@@ -108,8 +111,8 @@ section .products{
     
   }
   
-  .card .box .size-btn a:hover, a:active {
-    background-color: lightgreen;
+  .card .box .size-btn a:hover {
+    background-color: lightgreen; 
     border-radius: 20px;
   }
 /* .price{
@@ -130,3 +133,13 @@ section .products{
     background: indianred;
     color: white;
 } */
+.card .img a:active{
+    background-color: white;
+}
+.hello .explr-link{
+    color: black;
+}
+.hello .explr-link .btn:active{
+
+background-color: white;
+}
